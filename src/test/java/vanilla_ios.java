@@ -11,8 +11,8 @@ import java.net.URL;
 
 public class vanilla_ios {
 
-    public static String userName = "sandhyas";
-    public static String accessKey = "Zxv9DJUj23o5R0lwZZIPbDkrmTw4Jny5JVBRg2IOzrynXhYQDH";
+    public static String userName = "username";
+    public static String accessKey = "accessKey";
 
     public static final String URL = "https://" + userName + ":" + accessKey + "@mobile-hub.lambdatest.com/wd/hub";
     public static IOSDriver driver = null;
@@ -36,10 +36,10 @@ public class vanilla_ios {
                     caps);
 
             Thread.sleep(2000);
-            // Push file
-            driver.pushFile("@com.koombea.LunaTherapist-Stag:documents/sample-image.jpg", new File("C:/Users/sandhyas/Pictures/Screenshots/Screenshot 2023-09-06 135203.png"));
+            // Push file and add app bundle_id 
+            driver.pushFile("@com.sandhyaa.Lambda-Stag:documents/sample-image.jpg", new File("C:/Users/sandhyas/Pictures/Screenshots/Screenshot 2023-09-06 135203.png"));
 // Pull file
-            byte[] fileBase64 = driver.pullFile("@com.koombea.LunaTherapist-Stag:documents/sample-image.jpg");
+            byte[] fileBase64 = driver.pullFile("@com.sandhyaa.Lambda-Stag:documents/sample-image.jpg");
 
             // Changes color
 
